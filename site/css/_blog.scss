@@ -1,0 +1,85 @@
+.blog-banner {
+    margin-bottom: 200px;
+
+    img {
+        width: 100%;
+        background: #CDA274;
+    }
+
+    &_align {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+
+    .intro {
+        max-width: 503px;
+        max-height: 178px;
+        background-color: #FFF;
+        border-radius: 50px 50px 0 0;
+        margin-top: -178px;
+        position: relative;
+        z-index: 1;
+        padding: 41px 78px;
+        text-align: center;
+        // margin-left: ;
+
+        &__heading {
+            font-family: DM Serif Display;
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 63px;
+            letter-spacing: 0em;
+            // text-align: left;
+            color: $headingColor;
+        }
+    }
+}
+
+// часть стилей в index.scss
+.latestArticle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 65px;
+    margin-bottom: 150px;
+
+    img {
+        border-radius: 40px;
+        background-color: #C4C4C4;
+        ;
+    }
+
+    &__textBlock {
+        padding-right: 34px;
+    }
+}
+
+.blog_margin {
+    margin-bottom: 200px;
+}
+
+.pagination {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 51px;
+
+    &__btn {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #FFF;
+        color: $headingColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #CDA274;
+
+        &_active {
+            background: #F4F0EC;
+            border: 1px solid #F4F0EC;
+        }
+    }
+}
