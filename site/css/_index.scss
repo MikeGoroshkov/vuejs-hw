@@ -264,7 +264,7 @@
     }
 
     &__text {
-        width: 80%;
+        width: 85%;//80%;
         // margin-bottom: 20px;
     }
 
@@ -277,6 +277,7 @@
         text-align: left;
         color: $headingColor;
         margin-bottom: 20px;
+        white-space: pre-line; // используем, чтобы отображались переносы строк
     }
 
     &__content {
@@ -325,11 +326,19 @@
 // .article:not(:nth-child(odd)) .article__btn {
 //     background-color: #FFF;
 // }
-.article:nth-child(2) {
+// .article:nth-child(2) {
+//     background-color: #F4F0EC;
+// }
+
+// .article:nth-child(2) .article__btn {
+//     background-color: #FFF;
+// }
+
+.article:hover {
     background-color: #F4F0EC;
 }
 
-.article:nth-child(2) .article__btn {
+.article:hover .article__btn {
     background-color: #FFF;
 }
 

@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <div class="" id="app">
     <header class="header center">
         <div class="header__left">
             <div class="logo">
@@ -24,9 +25,9 @@
         </div>
         <div class="header__right">
             <div class="menubar">
-                <a class="menu" href="#">Home</a>
+                <a class="menu" href="index.html">Home</a>
                 <a class="menu" href="#">Project</a>
-                <a class="menu" href="#">Blog</a>
+                <a class="menu" href="blog.html">Blog</a>
             </div>
         </div>
     </header>
@@ -35,7 +36,7 @@
         <div class="banner__block">
             <h1 class="banner__heading">Let Your Home Be Unique</h1>
             <p class="banner__text">There are many variations of the passages of
-                lorem Ipsum fromavailable, majority.</p>
+                lorem Ipsum from available, majority.</p>
             <button class="banner__btn">Get Started
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
@@ -55,7 +56,7 @@
                 <img class="project__img right-top-corner" src="img/index/project1.jpg" alt="project1">
                 <div class="project__textBox">
                     <div>
-                        <h3 class="project__heading">Modern Kitchan</h3>
+                        <h3 class="project__heading">Modern Kitchen</h3>
                         <p class="project__text">Decor / Artchitecture</p>
                     </div>
                     <div class="project__btn"><i class="fa-solid fa-chevron-right"></i></div>
@@ -65,7 +66,7 @@
                 <img class="project__img left-top-corner" src="img/index/project2.jpg" alt="project1">
                 <div class="project__textBox">
                     <div>
-                        <h3 class="project__heading">Modern Kitchan</h3>
+                        <h3 class="project__heading">Modern Kitchen</h3>
                         <p class="project__text">Decor / Artchitecture</p>
                     </div>
                     <!-- <button class="project__btn"><i class="fa-solid fa-angle-right"></i></button> -->
@@ -76,7 +77,7 @@
                 <img class="project__img right-bottom-corner" src="img/index/project3.jpg" alt="project1">
                 <div class="project__textBox">
                     <div>
-                        <h3 class="project__heading">Modern Kitchan</h3>
+                        <h3 class="project__heading">Modern Kitchen</h3>
                         <p class="project__text">Decor / Artchitecture</p>
                     </div>
                     <div class="project__btn"><i class="fa-solid fa-chevron-right"></i></div>
@@ -86,7 +87,7 @@
                 <img class="project__img left-bottom-corner" src="img/index/project4.jpg" alt="project1">
                 <div class="project__textBox">
                     <div>
-                        <h3 class="project__heading">Modern Kitchan</h3>
+                        <h3 class="project__heading">Modern Kitchen</h3>
                         <p class="project__text">Decor / Artchitecture</p>
                     </div>
                     <div class="project__btn"><i class="fa-solid fa-chevron-right"></i></div>
@@ -123,45 +124,20 @@
             </div>
         </div>
         <div class="articles">
-            <div class="article">
+            <div v-for="article in articles.slice(0, 3)" :key="article.id" class="article article_small">
                 <div class="article__img">
-                    <img src="img/blog/article1.jpg" alt="статья">
-                    <p class="article__tag">Kitchen Design</p>
+                    <img :src="article.img" alt="статья">
+                    <p class="article__tag">{{ article.tag }}</p>
                 </div>
                 <div class="article__text">
-                    <h2 class="article__heading">Let’s Get Solution For Building Construction Work</h2>
+                    <h2 class="article__heading">{{ article.heading }}</h2>
                 </div>
                 <div class="article__block">
-                    <p class="article__date">26 December,2022</p>
+                    <p class="article__date">{{ article.date }}</p>
                     <div class="article__btn"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
             </div>
-            <div class="article">
-                <div class="article__img">
-                    <img src="img/blog/article2.jpg" alt="статья">
-                    <p class="article__tag">Living Design</p>
-                </div>
-                <div class="article__text">
-                    <h2 class="article__heading">Low Cost Latest Invented Interior Designing Ideas.</h2>
-                </div>
-                <div class="article__block">
-                    <p class="article__date">22 December,2022</p>
-                    <div class="article__btn"><i class="fa-solid fa-chevron-right"></i></div>
-                </div>
-            </div>
-            <div class="article">
-                <div class="article__img">
-                    <img src="img/blog/article3.jpg" alt="статья">
-                    <p class="article__tag">Interior Design</p>
-                </div>
-                <div class="article__text">
-                    <h2 class="article__heading">Best For Any Office & Business Interior Solution</h2>
-                </div>
-                <div class="article__block">
-                    <p class="article__date">25 December,2022</p>
-                    <div class="article__btn"><i class="fa-solid fa-chevron-right"></i></div>
-                </div>
-            </div>
+            
         </div>
     </section>
     <footer class="footer center">
@@ -189,6 +165,11 @@
             <p class="contacts__text">(123) 456 - 7890</p>
         </div>
     </footer>
+</div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
+    <script src="js/blog.js"></script>
 
 </body>
 
