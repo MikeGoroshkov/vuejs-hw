@@ -1,0 +1,140 @@
+/* blog_details*/
+.blog_flex {
+    display: flex;
+    margin-bottom: 96px;
+}
+
+.blog-details {
+    width: 65%;
+
+    &__img img {
+        border-radius: 50px;
+        width: 100%;
+        margin-bottom: 46px;
+    }
+
+    &__heading {
+        font-family: DM Serif Display;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 63px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #292F36;
+        margin-bottom: 16px;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-bottom: 48px; */
+    }
+
+    &__textBox {}
+
+    &__text,
+    &__date {
+        white-space: pre-line;
+        font-family: Jost;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 33px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        margin-bottom: 48px;
+        color: #4D5053;
+    }
+
+    &__text {
+        text-align: justify;
+
+        &_span {
+            font-family: DM Serif Display;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 25px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: #CDA274;
+        }
+    }
+    &__item {
+        display: flex;
+        gap: 11px;
+    }
+}
+
+.quotes {
+    padding-top: 103px;
+    padding-bottom: 53px;
+    background-color: #F4F0EC;
+    border-radius: 50px;
+
+    &__sign,
+    &__text {
+        font-family: DM Serif Display;
+        font-size: 25px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #CDA274;
+        white-space: pre-line;
+    }
+
+    &__sign {
+        font-size: 200px;
+    }
+}
+
+.sidebar {
+    position: sticky;
+    top: 20%;
+    width: 30%;
+    margin-left: 4%;
+    margin-bottom: 10%;
+    /* float: right; */
+
+    &__heading {
+        font-family: DM Serif Display;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #292F36;
+        margin-bottom: 24px;
+    }
+
+    &__tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+.tag {
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    background: #F4F0EC;
+    color: #292F36;
+    font-family: Jost;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    &:hover,
+    .active {
+        background: #292F36;
+        color: #FFF;
+    }
+}
+
+.active {
+    background: #292F36;
+    color: #FFF;
+}

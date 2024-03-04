@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interno</title>
+    <script src="https://kit.fontawesome.com/249c288045.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header center">
+        <div class="header__left">
+            <div class="logo">
+                <img class="logo__img" src="img/Logo.png" alt="логотип">
+                <p class="logo__text">Interno</p>
+            </div>
+        </div>
+        <div class="header__right">
+            <div class="menubar">
+                <a class="menu" href="index.html">Home</a>
+                <a class="menu" href="#">Project</a>
+                <a class="menu" href="blog.html">Blog</a>
+            </div>
+        </div>
+    </header>
+    <section class="blog-banner">
+        <img src="img/blog/Banner_blog_details.jpg" alt="баннер">
+    </section>
+    <section class="blog_flex center" id="app">
+        <!-- <div id="app"> -->
+        <!-- первая страница -->
+        <div class="blog-details">
+            <div class="blog-details__article">
+                <div class="blog-details__text">
+                    <h2 class="blog-details__heading">Let’s Get Solution for Building
+                        Construction Work</h2>
+                </div>
+                <div class="blog-details__img">
+                    <img src="img/blog/kitchen4.jpg" alt="статья">
+                </div>
+                <div class="blog-details__block">
+                    <p class="blog-details__date">26 December,2022</p>
+                    <div class="blog-details__date">Interior / Home / Decore</div>
+                </div>
+                <div class="blog-details__textBox">
+                    <p class="blog-details__text"> Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+                        turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem
+                        Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or
+                        randomised words which don't look even slightly believable.</p>
+                    <p class="blog-details__text">
+                        Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend
+                        to repeat predefined chunks as necessary.
+                    </p>
+                </div>
+            </div>
+
+            <div class="quotes">
+                <p class="quotes__sign">”</p>
+                <p class="quotes__text"> The details are not the details.</p>
+                <p class="quotes__text">They make the design.</p>
+            </div>
+
+            <div class="blog-details__article">
+                <div class="blog-details__text">
+                    <h2 class="blog-details__heading">Design sprints are great</h2>
+                </div>
+                <div class="blog-details__textBox">
+                    <p class="blog-details__text"> Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+                        turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem
+                        Ipsum available, but the majority have suffered.</p>
+                </div>
+                <div class="blog-details__list">
+                    <div class="blog-details__item">
+                        <p class="blog-details__text_span">1</p>
+                        <p class="blog-details__text"> Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.
+                        </p>
+                    </div>
+                    <div class="blog-details__item">
+                        <p class="blog-details__text_span">2</p>
+                        <p class="blog-details__text"> Contrary to popular belief.There are many variations of passages of Lorem Ipsum
+                            available, but the majority have suffered.
+                        </p>
+                    </div>
+                    <div class="blog-details__item">
+                        <p class="blog-details__text_span">3</p>
+                        <p class="blog-details__text"> Contrary to popular belief.There are many variations of passages of Lorem Ipsum
+                            available, but the majority have suffered.
+                        </p>
+                    </div>
+                </div>
+                <div class="blog-details__img">
+                    <img src="img/blog/kitchen3.jpg" alt="статья">
+                </div>
+                
+                <div class="blog-details__textBox">
+                    <p class="blog-details__text"> Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are
+                    many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+            <h3 class="sidebar__heading">Tags</h3>
+            <div class="sidebar__tags">
+                <div class="tag" v-for="tag in tags" :key="tag.id" :class="{active:tag.active}" @click="findArticles(tag, $event)">{{ tag.text }}</div>
+
+            </div>
+        </div>
+        <article></article>
+
+    </section>
+    <footer class="footer center">
+        <div class="about">
+            <div class="logo">
+                <img class="logo__img" src="img/Logo.png" alt="логотип">
+                <p class="logo__text">Interno</p>
+            </div>
+            <p class="about__text">It is a long established fact that a reader will be distracted lookings.</p>
+            <div class="icons">
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+        <div class="pages">
+            <h2 class="pages__heading">Pages</h2>
+            <a href="#" class="pages__link">Home</a>
+            <a href="#" class="pages__link">Project</a>
+            <a href="#" class="pages__link">Blog</a>
+        </div>
+        <div class="contacts">
+            <h2 class="contacts__heading">Contact</h2>
+            <p class="contacts__text">55 East Birchwood Ave. Brooklyn, New York 11201</p>
+            <p class="contacts__text">contact@interno.com</p>
+            <p class="contacts__text">(123) 456 - 7890</p>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/articles.js"></script>
+    <script>
+        Vue.createApp(app).mount("#app");
+
+    </script>
+
+</body>
+
+</html>
