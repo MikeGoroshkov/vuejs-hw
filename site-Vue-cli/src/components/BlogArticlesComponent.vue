@@ -2,7 +2,7 @@
     <section class="articles container">
       <h1 class="articles__heading heading">Articles & News</h1>
       <div class="blog__flex">
-        <div v-for="item in items" :key="item.id" class="blog__item">
+        <div v-for="item in GET_ITEMS" :key="item.id" class="blog__item">
           <img class="blog__item__img" :src="item.image" alt="#" />
           <div class="blog__item__teg">{{item.tag}}</div>
           <div class="blog__item__content">
@@ -58,55 +58,12 @@
     </section>
 </template>
 <script>
+
+import { mapGetters } from 'vuex';
+
 export default {
-    name: 'BlogArticlesComponent',
-    data() {
-        return {
-            items: [
-                {
-                    id: 1,
-                    image: require("@/assets/BlogImg/blogCard1.jpg"),
-                    tag: "Kitchan Design",
-                    title: "Let's Get Solution For Building Construction Work",
-                    date: "26 December,2022",
-                },
-                {
-                    id: 2,
-                    image: require("@/assets/BlogImg/blogCard2.jpg"),
-                    tag: "Living Design",
-                    title: "Low Cost Latest Invented Interior Designing \n Ideas",
-                    date: "22 December,2022 ",
-                },
-                {
-                    id: 3,
-                    image: require("@/assets/BlogImg/blogCard3.jpg"),
-                    tag: "Interior Design",
-                    title: "Best For Any Office & Business Interior Solution",
-                    date: "25 December,2022 ",
-                },
-                {
-                    id: 4,
-                    image: require("@/assets/BlogImg/blogCard4.jpg"),
-                    tag: "Kitchan Design",
-                    title: "Let's Get Solution For Building Construction Work",
-                    date: "26 December,2022",
-                },
-                {
-                    id: 5,
-                    image: require("@/assets/BlogImg/blogCard5.jpg"),
-                    tag: "Living Design",
-                    title: "Low Cost Latest Invented Interior Designing \n Ideas",
-                    date: "22 December,2022 ",
-                },
-                {
-                    id: 6,
-                    image: require("@/assets/BlogImg/blogCard6.jpg"),
-                    tag: "Interior Design",
-                    title: "Best For Any Office & Business Interior Solution",
-                    date: "25 December,2022 ",
-                },
-            ]
-        }
+    computed: {
+      ...mapGetters(['GET_ITEMS'])
     }
 }
 </script>

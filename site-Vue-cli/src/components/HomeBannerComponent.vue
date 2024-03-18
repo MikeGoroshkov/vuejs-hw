@@ -39,7 +39,7 @@ export default {
     name: 'HomeBannerComponent'
 }
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 @import "@/assets/variables.scss";
 .home-banner {
     position: relative;

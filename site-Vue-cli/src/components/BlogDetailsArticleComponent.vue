@@ -1,5 +1,5 @@
 <template>
-  <section class="BlogDetailsArticle container" v-for="article in filterArticles" :key="article.id">
+  <section class="BlogDetailsArticle container" v-for="article in GET_FILTER_ARTICLES" :key="article.id">
     <div class="article">
         <h1 class="heading">{{ article.title }}</h1>
         <div class="img1">
@@ -36,7 +36,7 @@
 
     <div class="tags">
         <h3 class="title">Tags</h3>
-        <button  @click="filterByTag(tag)" class="tags__button text" v-for="tag in tagsList">{{ tag }}</button>
+        <button  @click="filterByTag(tag)" class="tags__button text" v-for="tag in GET_TAG_LIST">{{ tag }}</button>
         
     </div>
     
@@ -44,82 +44,19 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
+
 export default {
-  name: 'BlogDetailsArticleComponent',
-  props: {
-    msg: String
+  computed: {
+    ...mapGetters(['GET_TAG_LIST', 'GET_FILTER_ARTICLES'])
   },
-  data() {
-    return {
-        articles: [
-            {
-                id: 1,
-                tag: 'Kitchen',
-                title: 'Let’s Get Solution for Building Construction Work',
-                img1: require('@/assets/BlogDetailsArticleImg/Kitchen1.jpg'),
-                img2: require('@/assets/BlogDetailsArticleImg/Kitchen2.jpg'),
-                date: '26 December,2022',
-                text1: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.\n\nEmbarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
-                subtitle: 'Design sprints are great',
-            },
-            {
-                id: 2,
-                tag: 'Bedroom',
-                title: 'Low Cost Latest Invented Interior Designing Ideas.',
-                img1: require('@/assets/BlogDetailsArticleImg/Bedroom.jpg'),
-                img2: require('@/assets/BlogDetailsArticleImg/Kitchen2.jpg'),
-                date: '26 December,2022',
-                text1: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.\n\nEmbarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
-                subtitle: 'Design sprints are great',
-            },
-            {
-                id: 3,
-                tag: 'Living',
-                title: 'Best For Any Office & Business Interior Solution',
-                img1: require('@/assets/BlogDetailsArticleImg/Living.jpg'),
-                img2: require('@/assets/BlogDetailsArticleImg/Kitchen2.jpg'),
-                date: '26 December,2022',
-                text1: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.\n\nEmbarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
-                subtitle: 'Design sprints are great',
-            },
-            {
-                id: 4,
-                tag: 'Interior',
-                title: 'Low Cost Latest Invented Interior Designing Ideas.',
-                img1: require('@/assets/BlogDetailsArticleImg/Interior.jpg'),
-                img2: require('@/assets/BlogDetailsArticleImg/Kitchen2.jpg'),
-                date: '26 December,2022',
-                text1: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.\n\nEmbarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
-                subtitle: 'Design sprints are great',
-            },
-
-        ],
-        tagsList: ['Kitchen', 'Living', 'Bedroom', 'Interior'],
-        filterArticles: [
-        {
-                id: 1,
-                tag: 'Kitchen',
-                title: 'Let’s Get Solution for Building Construction Work',
-                img1: require('@/assets/BlogDetailsArticleImg/Kitchen1.jpg'),
-                img2: require('@/assets/BlogDetailsArticleImg/Kitchen2.jpg'),
-                date: '26 December,2022',
-                text1: "Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.\n\nEmbarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
-                subtitle: 'Design sprints are great',
-            },
-        ],
-    }
-},
-methods: {
-    filterByTag(tagName) {
-        this.filterArticles = this.articles.filter(el => tagName === el.tag);
-    },
-},
+  methods: {
+    ...mapMutations(['filterByTag'])
+  }
 }
-
-
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped lang="scss">
 @import "@/assets/variables.scss";
 

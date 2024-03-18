@@ -1,26 +1,35 @@
 <template>
     <section class="blog__banner">
       <div class="container">
-        <div class="breadcrumb">
-          <h2 class="breadcrumb__name heading">Articles & News</h2>
+        <div v-if="isBreadCrumbs" class="breadcrumb">
+          <h2 class="breadcrumb__name heading">{{ heading }}</h2>
           <p class="breadcrumb__way">
             <a class="text" href="#">Home</a>
-            <a class="text" href="#">Blog</a>
+            <a class="text" href="#">{{ pageName }}</a>
           </p>
         </div>
       </div>
     </section>
 </template>
+
 <script>
-export default {
-    name: 'BlogBannerComponent',
-}
+    export default {
+        props: {
+          heading: String,
+          pageName: String,
+          srcImg: String,
+          isBreadCrumbs: Boolean,
+        },
+    }
 </script>
-<style scoped lang="scss">
+
+<style lang="scss">
 @import '@/assets/variables.scss';
-    .blog__banner {
+
+
+
+.blog__banner {
     height: 356px;
-    background-image: url('@/assets/BlogImg/blogBanner.jpg');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -41,6 +50,7 @@ export default {
         padding-left: 5px;
     }   
 }
+
 .breadcrumb__way a {
     transition: all 0.2s ease;
     &:hover {
