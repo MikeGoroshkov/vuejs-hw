@@ -1,5 +1,4 @@
 <template>
-    <HeaderComponent />
     <HomeBannerComponent />
     <HomeProjectComponent />
     <HomeCounterComponent />

@@ -6,7 +6,7 @@
                 <p class="title">{{ card.name }}</p>
                 <p class="text">{{ card.path }}</p>
             </div>
-            <div class="blog__item__link">
+            <router-link to="/project-details" class="blog__item__link">
                 <svg
                 width="10"
                 height="20"
@@ -22,7 +22,7 @@
                     stroke-linejoin="round"
                 />
                 </svg>
-          </div>
+          </router-link>
         </div>
     </div>
 </template>

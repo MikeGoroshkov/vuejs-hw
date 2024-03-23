@@ -1,6 +1,8 @@
 <template>
+  <HeaderComponent />
+  <RouterView/>
 
-  <Home />
+  <!-- <Home /> -->
 
   <!-- <Blog /> -->
 
@@ -18,6 +20,7 @@ import BlogDetails from './pages/BlogDetails.vue';
 import Blog from './pages/Blog.vue';
 import Project from './pages/Project.vue';
 import ProjectDetails from './pages/ProjectDetails.vue';
+import HeaderComponent from './components/HeaderComponent.vue';
 
 export default {
   name: 'App',
@@ -28,6 +31,7 @@ export default {
     Blog,
     Project,
     ProjectDetails,
+    HeaderComponent,
 
   }
 }

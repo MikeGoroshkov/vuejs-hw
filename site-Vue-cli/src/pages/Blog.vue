@@ -1,29 +1,37 @@
 <template>
-    <HeaderComponent />
-    <BlogBannerComponent />
+    
+    <BannerComponent heading='Articles & News' pageName='Blog' :class="'blog-banner-bgImg'" :isBreadCrumbs='true'/>
+
     <LatestPostComponent />
+
     <BlogArticlesComponent />
-    <Footer />
+
+    <FooterComponent />
+
 </template>
+
 <script>
     import HeaderComponent from '../components/HeaderComponent.vue';
     import FooterComponent from '../components/FooterComponent.vue';
-    import BlogBannerComponent from '../components/BlogBannerComponent.vue';
-import LatestPostComponent from '@/components/LatestPostComponent.vue';
-import BlogArticlesComponent from '@/components/BlogArticlesComponent.vue';
+    import BannerComponent from '../components/BannerComponent.vue';
+    import LatestPostComponent from '@/components/LatestPostComponent.vue';
+    import BlogArticlesComponent from '@/components/BlogArticlesComponent.vue';
+
 
 export default {
     name: 'Blog',
     components: {
-    HeaderComponent,
-    FooterComponent,
-    BlogBannerComponent,
-    LatestPostComponent,
-    BlogArticlesComponent
-}
-    
+        HeaderComponent,
+        FooterComponent,
+        BannerComponent,
+        LatestPostComponent,
+        BlogArticlesComponent
+    }    
 }
 </script>
-<style lang="scss">
-    
+
+<style scoped lang="scss">
+    .blog-banner-bgImg {
+        background-image: url('@/assets/BlogImg/blogBanner.jpg');
+    }
 </style>

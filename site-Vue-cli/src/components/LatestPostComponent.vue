@@ -16,7 +16,7 @@
             classica.
           </p>
           <p class="latest-post__card__content__date text">26 December,2022</p>
-          <div class="blog__item__link">
+          <router-link to="/blog-details" class="blog__item__link">
             <svg
               width="10"
               height="20"
@@ -32,7 +32,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </div>
+          </router-link>
         </div>
       </div>
     </section>

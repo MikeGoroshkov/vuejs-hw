@@ -23,7 +23,7 @@
                 Decor / Artchitecture
               </h5>
             </div>
-            <div class="project__item__content__link">
+            <router-link to="/project-details" class="project__item__content__link">
               <svg
                 width="10"
                 height="20"
@@ -39,7 +39,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
+            </router-link>
           </div>
         </div>
         <div class="project__item">
@@ -57,7 +57,7 @@
                 Decor / Artchitecture
               </h5>
             </div>
-            <div class="project__item__content__link">
+            <router-link to="/project-details" class="project__item__content__link">
               <svg
                 width="10"
                 height="20"
@@ -73,7 +73,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
+            </router-link>
           </div>
         </div>
         <div class="project__item">
@@ -91,7 +91,7 @@
                 Decor / Artchitecture
               </h5>
             </div>
-            <div class="project__item__content__link">
+            <router-link to="/project-details" class="project__item__content__link">
               <svg
                 width="10"
                 height="20"
@@ -107,7 +107,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
+            </router-link>
           </div>
         </div>
         <div class="project__item">
@@ -125,7 +125,7 @@
                 Decor / Artchitecture
               </h5>
             </div>
-            <div class="project__item__content__link">
+            <router-link to="/project-details" class="project__item__content__link">
               <svg
                 width="10"
                 height="20"
@@ -141,7 +141,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-            </div>
+            </router-link>
           </div>
         </div>
       </div>

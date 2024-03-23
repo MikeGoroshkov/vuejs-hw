@@ -14,7 +14,7 @@
             </h3>
             <p class="blog__item__content__date">{{item.date}}</p>
           </div>
-          <div class="blog__item__link">
+          <router-link to="/blog-details" class="blog__item__link">
             <svg
               width="10"
               height="20"
@@ -30,7 +30,7 @@
                 stroke-linejoin="round"
               />
             </svg>
-          </div>
+          </router-link>
         </div>
       </div>
       <div class="articles__pagination">

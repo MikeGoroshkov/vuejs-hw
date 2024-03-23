@@ -1,9 +1,9 @@
 <template>
     <footer class="footer container">
       <div class="footer__about">
-        <a href="#">
+        <router-link to="/">
           <img class="logo-img" src="@/assets/Logo (1).png" alt="logo" />
-        </a>
+        </router-link>
         <p class="footer__about__text text">
           It is a long established fact that a reader will be distracted
           lookings.
@@ -41,17 +41,11 @@
       </div>
       <div class="footer__pages-nav">
         <h3 class="footer__pages-nav__title title">Pages</h3>
-        <a class="text" href="#home">Home</a>
-        <a class="text" href="#project">Project</a>
-        <a class="text" href="#blog">Blog</a>
+        <router-link class="text" v-for="link in links" :key="link.name" :to="link.url">{{ link.name }}</router-link>
       </div>
       <div class="footer__contact">
         <h3 class="footer__contact__title title">Contact</h3>
-        <p class="adress text">
-          55 East Birchwood Ave. Brooklyn, New York 11201
-        </p>
-        <p class="email text">contact@interno.com</p>
-        <p class="phone text">(123) 456 - 7890</p>
+        <p class="text" v-for="contact in contacts" :key="contact.name">{{ contact.data }}</p>
       </div>
     </footer>
 </template>
@@ -59,6 +53,38 @@
 <script>
 export default {
     name: 'FooterComponent',
+    data() {
+      return {
+        links: [
+            {
+              name: 'Home',
+              url: '/'
+            },
+            {
+              name: 'Project',
+              url: '/project'
+            },
+            {
+              name: 'Blog',
+              url: '/blog'
+            },
+          ],
+        contacts: [
+          {
+            name: 'adress',
+            data: '55 East Birchwood Ave. Brooklyn, New York 11201'
+          },
+          {
+            name: 'email',
+            data: 'contact@interno.com'
+          },
+          {
+            name: 'phone',
+            data: '(123) 456 - 7890'
+          }
+        ],
+      }
+    },
 }
 </script>
 
